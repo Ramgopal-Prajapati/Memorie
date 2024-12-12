@@ -150,6 +150,48 @@
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         
         }
+
+           /* Form Styles */
+          .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+          
+            border-radius: 20px;
+            font-size: 18px;
+            width: 80%;
+            max-width: 600px;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 3px solid #146821;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #0056b3;
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: #cc7d50;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
         
         /* Media Queries for Smaller Devices */
         @media (max-width: 768px) {
@@ -182,6 +224,11 @@
                 height: 100px;
                 margin-top: 0px;
             }
+
+             .contact-form input,
+            .contact-form textarea {
+                width: 90%;
+            }
         }
         
         @media (max-width: 480px) {
@@ -210,6 +257,11 @@
             main .friend img {
                 width: 150px;
                 height: 150px;
+            }
+
+              .contact-form input,
+            .contact-form textarea {
+                width: 90%;
             }
         }
 
@@ -592,6 +644,25 @@
 
         <!-- Add more friends here -->
     </main>
+      <form action="https://api.web3forms.com/submit" class="contact-form"  method="POST">
+            <input type="hidden" name="access_key" value="dbe6b009-b8d8-47cd-a5b9-ebe9eaa0a333">
+        <h2>Anyone who is my friends,  want to add your profile in this page  , then please share your information</h2>
+        <input type="text" name="name" placeholder="Enter Your Name" id="name" required>
+        <input type="email" name="email" placeholder="Enter Your Email" id="email" required>
+        <input type="text" name="number" placeholder="Enter Your Mobile NO." id="number" required>
+        <input type="text" name="link" placeholder="Enter Instagram Id link" id="link" required>
+        <input type="file" name="photo" placeholder="Select Your Photo" id="photo" required>
+
+
+        <textarea name="message" placeholder="Your Message" rows="4" id="message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+        <!-- Add more friends here -->
+    </main>
+    <footer>
+        <p>  &copy; 2024 Ramgopal All rights reserved.</p>
+
+    </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             new Typed('.typed', {
